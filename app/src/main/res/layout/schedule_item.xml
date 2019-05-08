@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground">
+
+
+        <ImageView
+            android:id="@+id/kuang"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/no"/>
+
+        <TextView
+            android:id="@+id/schedule_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#888"
+            android:textSize="11sp"
+            android:layout_marginLeft="1dp"/>
+
+
+        <TextView
+            android:id="@+id/schedule_plan"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="233"/>
+
+        <Button
+            android:id="@+id/delete_schedule"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/delete"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

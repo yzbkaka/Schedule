@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="Store"></dbname>
+    <version value="1"></version>
+
+    <list>
+        <mapping class="com.example.yzbkaka.things.db.Plan"></mapping>
+        <mapping class="com.example.yzbkaka.things.db.Log"></mapping>
+    </list>
+</litepal>

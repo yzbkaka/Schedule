@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Schedule"
+            android:textColor="#000"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginLeft="16sp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/explain_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/explain_one"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+
+            <ImageView
+                android:id="@+id/explain_button_one"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:text="1.在“今天”中点击右下角按钮即可开始创建当日任务"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/explain_two"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_two"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:text="2.在“计划”中可以设定未来想要做的任务，当那一天到来时会自动显示到当天的任务列表中"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/explain_three"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_three"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:text="3.如果想要记下一些重要事项，可以使用“便签”功能"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/explain_four"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_four"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:text="4.如果想要查询已经完成的任务，可以在“历史”中查看"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/explain_five"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_five"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:text="5.如果完成了上述任务就可以点击前面的对勾进行消除"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

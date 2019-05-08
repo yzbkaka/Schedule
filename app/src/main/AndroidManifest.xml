@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yzbkaka.things">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo144"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Today.NoteActivity" />
+        <activity
+            android:name=".Today.TodayCreateActivitty"
+            android:theme="@style/MyTheme1"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".Today.AlterTodayActivity"
+            android:theme="@style/MyTheme1"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:name=".Log.LogActivity" />
+        <activity
+            android:name=".Log.LogCreateActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:name=".Log.AlterLogActivity" />
+        <activity android:name=".History.HistoryActivity" />
+        <activity android:name=".Schedule.ScheduleActivity" />
+        <activity android:name=".Schedule.ScheduleViewActivity" />
+        <activity
+            android:name=".Schedule.ScheduleCreateActivity"
+            android:theme="@style/MyTheme1"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Setting.SettingActivity" />
+
+        <service
+            android:name=".Service.SendMessage"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Setting.ExplainActivity" />
+        <activity
+            android:name=".Schedule.AlterScheduleActivity"
+            android:theme="@style/MyTheme1"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:name=".Setting.AboutActivity"></activity>
+    </application>
+
+</manifest>
