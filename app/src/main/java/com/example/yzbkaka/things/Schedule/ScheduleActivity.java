@@ -51,7 +51,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 String month = String.valueOf(date.getMonth()+1);
                 String day = String.valueOf(date.getDay());
 
-                if(((year.equals(todayYear) && month.equals(todayMonth) && Integer.parseInt(day) < Integer.parseInt(day))) || (year.equals(todayYear) && Integer.parseInt(month) < Integer.parseInt(todayMonth)) || (Integer.parseInt(year) < Integer.parseInt(todayYear))){  //如果选中的是今天，则会创建失败
+                if(((year.equals(todayYear) && month.equals(todayMonth) && Integer.parseInt(day) < Integer.parseInt(todayDay))) || (year.equals(todayYear) && Integer.parseInt(month) < Integer.parseInt(todayMonth)) || (Integer.parseInt(year) < Integer.parseInt(todayYear))){  //如果选中的是今天，则会创建失败
                     Toast.makeText(ScheduleActivity.this, "请选择未来的时间点哦", Toast.LENGTH_SHORT).show();
                 }
                 else {

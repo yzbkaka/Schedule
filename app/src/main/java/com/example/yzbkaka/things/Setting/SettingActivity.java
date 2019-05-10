@@ -21,6 +21,7 @@ public class SettingActivity extends AppCompatActivity {
     private LinearLayout about;
     private LinearLayout exit;
     public static int count = 0;
+    private Button dark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

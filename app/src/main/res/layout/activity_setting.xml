@@ -82,6 +82,8 @@
         </LinearLayout>
 
 
+
+
         <LinearLayout
             android:id="@+id/how_to_use"
             android:orientation="horizontal"

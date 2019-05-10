@@ -2,6 +2,7 @@ package com.example.yzbkaka.things.Adapter;
 
 import android.content.Intent;
 import android.os.Message;
+import android.provider.AlarmClock;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.yzbkaka.things.DoubleClickListener;
 import com.example.yzbkaka.things.MainActivity;
 import com.example.yzbkaka.things.R;
 import com.example.yzbkaka.things.Today.AlterTodayActivity;
@@ -134,6 +136,14 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
 
 
                 return true;
+            }
+        });
+
+        holder.todayView.setOnClickListener(new DoubleClickListener() {  //双击事件
+            @Override
+            public void onDoubleClick(View view) {
+                Intent alarmsIntent = new Intent(AlarmClock.ACTION_SET_ALARM);  //调用系统闹钟
+                view.getContext().startActivity(alarmsIntent);
             }
         });
 
