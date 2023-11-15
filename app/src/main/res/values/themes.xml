@@ -1,0 +1,9 @@
+<resources>
+<!--  <style name="Theme.Schedule.NoActionBar" >-->
+<!--  <item name="windowActionBar">false</item>-->
+<!--  <item name="windowNoTitle">true</item>-->
+<!--  </style>-->
+
+  <style name="Theme.Schedule.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+  <style name="Theme.Schedule.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
