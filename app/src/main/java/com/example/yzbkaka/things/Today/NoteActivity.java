@@ -1,21 +1,16 @@
 package com.example.yzbkaka.things.Today;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.TextView;
-
 
 import com.example.yzbkaka.things.Adapter.TodayAdapter;
 import com.example.yzbkaka.things.R;
@@ -27,8 +22,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
-
-import static com.example.yzbkaka.things.MainActivity.todayCount;
 
 
 public class NoteActivity extends AppCompatActivity {
@@ -51,6 +44,7 @@ public class NoteActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);  //一定要为RecyclerView设置布局管理器
         todayView.setLayoutManager(layoutManager);
 
+        //back
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,11 +52,13 @@ public class NoteActivity extends AppCompatActivity {
             }
         });
 
+        //create
         create.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NoteActivity.this, TodayCreateActivitty.class);
-                create.setVisibility(View.GONE);
+                //create.setVisibility(View.GONE);
                 startActivity(intent);
             }
         });
@@ -74,6 +70,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void onResume() {
         super.onResume();
@@ -102,6 +99,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void onPause(){
         super.onPause();

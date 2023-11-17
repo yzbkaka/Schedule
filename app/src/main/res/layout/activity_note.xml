@@ -25,9 +25,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:textSize="22sp"
+                    android:text="今天"
                     android:textColor="#000"
-                    android:text="今天" />
+                    android:textSize="22sp" />
 
                 <Button
                     android:id="@+id/back"
@@ -64,11 +64,15 @@
         android:id="@+id/create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/add"
-        android:backgroundTint="#FFD300" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="#FFD300"
+        android:src="@drawable/add" />
 
 
 </RelativeLayout>
