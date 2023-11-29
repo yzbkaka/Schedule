@@ -31,21 +31,20 @@ public class AlterTodayActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.old_text);
         finish = (Button)findViewById(R.id.finish);
         Intent intent = getIntent();
-        oldWrite = intent.getStringExtra("write");  //得到之前的数据
-        editText.setText(oldWrite);  //将之前的数据显示在EditText上
-
+        oldWrite = intent.getStringExtra("write");  //Get the previous data
+        editText.setText(oldWrite);  //Display the previous data on the EditText
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String newWrite = editText.getText().toString();  //得到用户修改之后的新数据
+                String newWrite = editText.getText().toString();  //Get the new data after user modification
                 if(newWrite.isEmpty()){
-                    LitePal.deleteAll(Plan.class,"writePlan = ?",oldWrite);  //如果修改之后为空则自动删除
-                    todayCount--;  //删除之后则统计数量减1
+                    LitePal.deleteAll(Plan.class,"writePlan = ?",oldWrite);  //Automatically deleted if empty after modification
+                    todayCount--;  //After deletion, the number of statistics is reduced by 1
                 }
                 else{
-                    plan.setWritePlan(newWrite);  //LitePal语法，先设置新的内容，再寻找条件更新
+                    plan.setWritePlan(newWrite);  //LitePal syntax, set new content first, then look for conditional updates
                     plan.updateAll("writePlan = ?",oldWrite);
-                    Toast.makeText(AlterTodayActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AlterTodayActivity.this, "Modify Successfully", Toast.LENGTH_SHORT).show();
                 }
                 finish();
 
