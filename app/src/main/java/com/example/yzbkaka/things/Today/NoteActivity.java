@@ -25,12 +25,12 @@ import java.util.TimeZone;
 
 
 public class NoteActivity extends AppCompatActivity {
-    private Button back;  //后退键
-    private RecyclerView todayView;  //显示今天所有任务的ListView
-    private List<Plan> todayList = new ArrayList<>();  //今天任务的列表
-    private List<Plan> dataList = new ArrayList<>();  //获得Plan数据库的列表
-    private FloatingActionButton create;  //创建新任务的按钮
-    public static TodayAdapter todayAdapter;  //适配器
+    private Button back;  //Backspace
+    private RecyclerView todayView;  //ListView showing all tasks for today
+    private List<Plan> todayList = new ArrayList<>();  //List of today's tasks
+    private List<Plan> dataList = new ArrayList<>();  //Get a list of Plan databases
+    private FloatingActionButton create;  //Button to create a new task
+    public static TodayAdapter todayAdapter;  //adapter
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class NoteActivity extends AppCompatActivity {
         create = (FloatingActionButton) findViewById(R.id.create);
 
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);  //一定要为RecyclerView设置布局管理器
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);  //Be sure to set up a layout manager for the RecyclerView
         todayView.setLayoutManager(layoutManager);
 
         //back
@@ -74,10 +74,10 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        create.setVisibility(View.VISIBLE);  //右下角的创建按钮显示出来
+        create.setVisibility(View.VISIBLE);  //The Create button in the lower right corner shows up
         dataList = LitePal.findAll(Plan.class);
 
-        Calendar calendar = Calendar.getInstance();  //获得今天的时间
+        Calendar calendar = Calendar.getInstance();  //Get the time of day
         calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
         String year = String.valueOf(calendar.get(Calendar.YEAR));
         String month = String.valueOf(calendar.get(Calendar.MONTH)+1);
@@ -89,7 +89,7 @@ public class NoteActivity extends AppCompatActivity {
             for(Plan plan:dataList){
                 if(plan.getYear().equals(year) && plan.getMonth().equals(month) && plan.getDay().equals(day) && plan.getStatus()== false){
                     todayList.add(plan);
-                    //todayCount++;  //today统计数量加1
+                    //todayCount++;  //Add 1 to the number of today statistics
                 }
             }
         }
