@@ -26,9 +26,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textSize="22sp"
+                android:text="Log"
                 android:textColor="#000"
-                android:text="日志" />
+                android:textSize="22sp" />
 
             <Button
                 android:id="@+id/back"

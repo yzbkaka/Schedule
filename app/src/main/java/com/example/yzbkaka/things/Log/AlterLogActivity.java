@@ -50,7 +50,7 @@ public class AlterLogActivity extends AppCompatActivity {
                 else{
                     log.setLogWrite(newLog);
                     log.updateAll("logWrite = ?",oldLog);  //不能使用save的方法
-                    Toast.makeText(AlterLogActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AlterLogActivity.this, "Updated successfully", Toast.LENGTH_SHORT).show();
                 }
                 finish();
             }
