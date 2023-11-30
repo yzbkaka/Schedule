@@ -62,7 +62,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
     @Override
     public void onBindViewHolder(final ViewHolder holder , final int position){
         Plan plan = mDataList.get(position);
-        holder.time.setText(plan.getMonth() + "月" + plan.getDay() + "日");
+        holder.time.setText(plan.getMonth() + "Month" + plan.getDay() + "Day");
         holder.schedule.setText(plan.getWritePlan());
 
         holder.scheduleView.setOnClickListener(new View.OnClickListener() {

@@ -37,10 +37,10 @@
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="来记录一下吧！"
         android:layout_marginLeft="19sp"
+        android:hint="Record things here！"
         android:textColor="#000"
-        android:textSize="20dp"
-        android:textCursorDrawable="@null"/>
+        android:textCursorDrawable="@null"
+        android:textSize="20dp" />
 
 </LinearLayout>

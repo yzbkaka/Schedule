@@ -27,7 +27,7 @@
                 android:layout_centerInParent="true"
                 android:textSize="22sp"
                 android:textColor="#000"
-                android:text="计划" />
+                android:text="Schedule" />
 
             <Button
                 android:id="@+id/back"

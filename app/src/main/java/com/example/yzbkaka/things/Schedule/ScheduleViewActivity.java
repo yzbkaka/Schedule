@@ -66,7 +66,7 @@ public class ScheduleViewActivity extends AppCompatActivity {
         create.setVisibility(View.VISIBLE);
 
 
-        Calendar calendar = Calendar.getInstance();  //获取到今天的时间
+        Calendar calendar = Calendar.getInstance();  //get today's time
         calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
         String year = String.valueOf(calendar.get(Calendar.YEAR));
         String month = String.valueOf(calendar.get(Calendar.MONTH)+1);
@@ -75,9 +75,9 @@ public class ScheduleViewActivity extends AppCompatActivity {
         if (dataList.size() > 0){
             scheduleList.clear();
             for(Plan plan : dataList){
-                if((plan.getYear().equals(year) && plan.getMonth().equals(month) && Integer.parseInt(plan.getDay()) > Integer.parseInt(day) ) || ( plan.getYear().equals(year) && Integer.parseInt(plan.getMonth()) > Integer.parseInt(month) ) || (Integer.parseInt(plan.getYear()) > Integer.parseInt(year)) ){  //只要不是今天的就会显示在计划列表当中
+                if((plan.getYear().equals(year) && plan.getMonth().equals(month) && Integer.parseInt(plan.getDay()) > Integer.parseInt(day) ) || ( plan.getYear().equals(year) && Integer.parseInt(plan.getMonth()) > Integer.parseInt(month) ) || (Integer.parseInt(plan.getYear()) > Integer.parseInt(year)) ){  //Anything that isn't today will show up in the plan list
                     scheduleList.add(plan);
-                    //排序
+                    //Sort
                 }
             }
         }

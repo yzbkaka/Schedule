@@ -29,7 +29,7 @@ public class ScheduleCreateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_schedule_create);
         finish = (Button)findViewById(R.id.finish);
         editText = (EditText)findViewById(R.id.edit_text);
-        calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));  //设置为中国区的时间
+        calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));  //Set to the time in China
 
         Intent intent = getIntent();
         final String scheduleYear = intent.getStringExtra("year");
@@ -47,7 +47,7 @@ public class ScheduleCreateActivity extends AppCompatActivity {
                     plan.setDay(scheduleDay);
                     date = new Date(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH)+1,calendar.get(Calendar.DATE));
                     plan.save();
-                    Toast.makeText(ScheduleCreateActivity.this, "创建成功，记得要完成哦", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ScheduleCreateActivity.this, "Created successfully, remember to finish it", Toast.LENGTH_SHORT).show();
                 }
                 finish();
             }

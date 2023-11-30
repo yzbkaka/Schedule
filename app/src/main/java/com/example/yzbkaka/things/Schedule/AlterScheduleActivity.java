@@ -31,20 +31,20 @@ public class AlterScheduleActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.old_text);
         finish = (Button)findViewById(R.id.finish);
         Intent intent = getIntent();
-        oldWrite = intent.getStringExtra("write");  //得到之前的数据
-        editText.setText(oldWrite);  //将之前的数据显示在EditText上
+        oldWrite = intent.getStringExtra("write");  //get the previous data
+        editText.setText(oldWrite);  //Displays the previous data on the EditText
 
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String newWrite = editText.getText().toString();  //得到用户修改之后的新数据
+                String newWrite = editText.getText().toString();  //Get the new data after the user changes
                 if(newWrite.isEmpty()){
-                    LitePal.deleteAll(Plan.class,"writePlan = ?",oldWrite);  //如果修改之后为空则自动删除
+                    LitePal.deleteAll(Plan.class,"writePlan = ?",oldWrite);  //If the value is null after modification, it is automatically deleted
                 }
                 else{
-                    plan.setWritePlan(newWrite);  //LitePal语法，先设置新的内容，再寻找条件更新
+                    plan.setWritePlan(newWrite);  //LitePal syntax, first set the new content, and then look for conditional updates
                     plan.updateAll("writePlan = ?",oldWrite);
-                    Toast.makeText(AlterScheduleActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AlterScheduleActivity.this, "Changed successfully!", Toast.LENGTH_SHORT).show();
                 }
                 finish();
 

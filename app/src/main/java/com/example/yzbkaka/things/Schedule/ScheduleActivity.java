@@ -31,7 +31,7 @@ public class ScheduleActivity extends AppCompatActivity {
         back = (Button)findViewById(R.id.back);
         calendarView = (MaterialCalendarView)findViewById(R.id.calendarView);
 
-        Calendar calendar = Calendar.getInstance();  //得到今天的时间
+        Calendar calendar = Calendar.getInstance();  //Get the time today
         calendar.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
         final String todayYear = String.valueOf(calendar.get(Calendar.YEAR));
         final String todayMonth = String.valueOf(calendar.get(Calendar.MONTH)+1);
@@ -47,12 +47,12 @@ public class ScheduleActivity extends AppCompatActivity {
         calendarView.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
-                String year = String.valueOf(date.getYear());  //得到选中的时间
+                String year = String.valueOf(date.getYear());  //get chosen time
                 String month = String.valueOf(date.getMonth()+1);
                 String day = String.valueOf(date.getDay());
 
-                if(((year.equals(todayYear) && month.equals(todayMonth) && Integer.parseInt(day) < Integer.parseInt(todayDay))) || (year.equals(todayYear) && Integer.parseInt(month) < Integer.parseInt(todayMonth)) || (Integer.parseInt(year) < Integer.parseInt(todayYear))){  //如果选中的是今天，则会创建失败
-                    Toast.makeText(ScheduleActivity.this, "请选择未来的时间点哦", Toast.LENGTH_SHORT).show();
+                if(((year.equals(todayYear) && month.equals(todayMonth) && Integer.parseInt(day) < Integer.parseInt(todayDay))) || (year.equals(todayYear) && Integer.parseInt(month) < Integer.parseInt(todayMonth)) || (Integer.parseInt(year) < Integer.parseInt(todayYear))){  //If today is selected, the creation will fail
+                    Toast.makeText(ScheduleActivity.this, "Please choose a future time", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Intent intent = new Intent(ScheduleActivity.this, ScheduleCreateActivity.class);
